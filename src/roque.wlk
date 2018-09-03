@@ -17,9 +17,12 @@ object roque {
 		game.removeVisual(comidaActual)
 	}
 
-	method darComida() {
-		pepita.come(comidaActual)
-		comidaActual = null
+	method darDeComer() {
+		if (comidaActual != null) {
+			pepita.come(comidaActual)
+			game.addVisualIn(comidaActual, game.at(1.randoUpTo(12), 1.randomUpTo(9)))
+		}
 	}
 
 }
+
