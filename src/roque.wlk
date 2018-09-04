@@ -7,7 +7,7 @@ object roque {
 	// var property energia = 90
 	var comidaActual = null
 
-	method imagen() = "jugardo.png"
+	method imagen() = "jugador.png"
 
 	method encontraste(nuevaComida) {
 		if (comidaActual != null) {
@@ -18,11 +18,13 @@ object roque {
 	}
 
 	method darDeComer() {
-		if (comidaActual != null) {
-			pepita.come(comidaActual)
-			game.addVisualIn(comidaActual, game.at(1.randoUpTo(12), 1.randomUpTo(9)))
-		}
+		// if (comidaActual != null) {
+		pepita.come(comidaActual)
+			// game.addVisualIn(comidaActual, game.at(1.randoUpTo(12), 1.randomUpTo(9)))
+		comidaActual = null
 	}
 
 }
+
+
 

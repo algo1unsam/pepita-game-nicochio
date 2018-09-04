@@ -9,12 +9,12 @@ object pepita {
 
 	method imagen() {
 		if (energia < 10) {
-			return "pepitaCansada.png"
+			return "pepitaCanchera.png"
 		}
 		if (energia > 100) {
-			return "pepitaGorda.png"
+			return "pepita-gorda-raw.png"
 		} else {
-			return "pepita.png"
+			return "pepita1.png"
 		}
 	}
 
@@ -34,7 +34,7 @@ object pepita {
 	method energiaParaVolar(distancia) = 15 + 5 * distancia
 
 	method move(nuevaPosicion) {
-		if (energia >= 10) {
+		if (energia > self.energiaParaVolar(posicion.distance(nuevaPosicion))) {
 			energia -= self.energiaParaVolar(posicion.distance(nuevaPosicion))
 			self.posicion(nuevaPosicion)
 		} else {
@@ -42,8 +42,8 @@ object pepita {
 		}
 	}
 
-	method teEcontro(alguien) {
-		alguien.darDeComer(self)
+	method teEncontro(alguien) {
+		roque.darDeComer()
 	}
 
 }

@@ -6,7 +6,7 @@ object villaGesell {
 
 	method posicion() = game.at(8, 3)
 
-	method teEcontre(alguien) {
+	method teEncontro(alguien) {
 		game.say(alguien, "bienvenidos a villa gesell")
 	}
 
@@ -20,7 +20,7 @@ object buenosAires {
 
 	method posicion() = game.at(1, 1)
 
-	method teEcontre(alguien) {
+	method teEncontro(alguien) {
 		game.say(alguien, "bienvenidos a buenos aires")
 	}
 
