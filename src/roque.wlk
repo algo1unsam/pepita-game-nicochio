@@ -10,20 +10,22 @@ object roque {
 	method imagen() = "jugador.png"
 
 	method encontraste(nuevaComida) {
-	//	if (comidaActual != null) {
-	//		game.addVisualIn(comidaActual, posicion.up(1))
-//		}
+	if (comidaActual != null) {
+			game.addVisualIn(comidaActual, game.at(1.randomUpTo(9), 6.randomUpTo(9)))
+		}
 		comidaActual = nuevaComida
 		game.removeVisual(comidaActual)
 	}
 
 	method darDeComer() {
-		// if (comidaActual != null) {
-		pepita.come(comidaActual)
-		game.addVisualIn(manzana, game.at(5,1) )
-		game.addVisualIn(alpiste, game.at(5,5) )
-		comidaActual = null
+		if (comidaActual != null) {
+			pepita.come(comidaActual)
+			game.addVisualIn(comidaActual, game.at(1.randomUpTo(9), 6.randomUpTo(9)))
+			comidaActual = null
+		}
 	}
 
 }
+
+
 
