@@ -21,6 +21,12 @@ program PepitaGame {
 	keyboard.v().onPressDo{ pepita.volaHacia(villaGesell) }
 	keyboard.b().onPressDo{ pepita.volaHacia(buenosAires) }
 	game.whenCollideDo(roque, { comidaActual => comidaActual.teEncontro(roque) })
+	
+	//TODO nico, acá comidaActual EN REALIDAD es una variable que representa 
+	// CUALQUIER objeto que se cruza roque, puede ser una comida, pero también puede ser
+	// una ciudad, y también puede ser pepita, no sé si esto lo entendías pero el nombre
+	// debería ser mas representativo 
+	
 //	START
 	game.start()
 }

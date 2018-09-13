@@ -42,6 +42,11 @@ object pepita {
 		}
 	}
 
+	// TODO y alguien para qué esta?
+	// el mensaje deberías mandárselo a alguien y no a roque
+	// (ya que esa es la idea, le mandas por parámetro el objeto con el que se cruzó)
+	// te anda porque roque es el único personaje pero y si hubiera otro??
+	// (fijate que en comida lo hiciste bien)
 	method teEncontro(alguien) {
 		roque.darDeComer()
 	}
